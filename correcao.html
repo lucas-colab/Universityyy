@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção </title>
+</head>
+
+<body>
+
+    <h1>UNICSUL - PROG WEB</h1>
+
+    <h2>Exercicios de javascript</h2><br>
+
+    <p>Entre com o lado do quadrado(*)</p>
+
+    Lado: <input type="number" name="lado" id="lado"></input>
+    <p>Area do quadrado e' <strong><span id="areaq"></span></strong></p>
+    <br><br>
+
+    <p>Entre com a base e altura do retangulo(*)<br><br>
+        Base: <input type="number" id="base"></input><br><br>
+        Altura: <input type="number" id="altura"></input><br><br>
+    </p>
+
+    <p>Area do retangulo e'<strong><span id="arear"></span></strong></p><br><br>
+
+    <button onclick="calc()">Calcular</button>
+
+    <script>
+        //quadrado
+        function calc() {
+            var t = document.getElementById("lado").value.length;
+            if (t == 0) {
+                alert("digite o lado do quadrado");
+                document.getElementById("lado").focus();
+                return 0;
+            }
+            var x = document.getElementById("lado").value;
+            var ix = parseInt(x);
+            var area = ix * ix;
+            document.getElementById("areaq").innerHTML = area;        //retangulo
+            var r = document.getElementById("base").value.length;
+            if (r == 0) {
+                document.getElementById("base").focus();
+                return 0;
+            }
+
+            var u = document.getElementById("altura").value.length;
+            if (u == 0) {
+                alert("digite a altura do retangulo");
+                document.getElementById("altura").focus();
+                return 0;
+            }
+
+            var y = document.getElementById("base").value;
+            var iy = parseInt(y);
+            var p = document.getElementById("altura").value;
+            var ip = parseInt(p);
+
+            var aret = iy * ip;
+            document.getElementById("arear").innerText = aret;
+        }
+    </script>
+
+</body>
+
+</html>
