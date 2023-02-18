@@ -1,0 +1,104 @@
+<!-- Criar uma simples calculadora -->
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title> JavaScript Calculator </title>
+    <style>
+        h1 {
+            text-align: center;
+            padding: 23px;
+            background-color: cyan;
+            color: white;
+        }
+
+        #clear {
+            width: 250px;
+            border: 3px solid blue;
+            border-radius: 12px;
+            ;
+            padding: 10px;
+            background-color: cyan;
+        }
+
+        .formstyle {
+            width: 300px;
+            height: 530px;
+            margin: auto;
+            border: 3px solid skyblue;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        input {
+            width: 20px;
+            background-color: cyan;
+            color: blue;
+            border: 3px solid gray;
+            border-radius: 12px;
+            padding: 26px;
+            margin: 5px;
+            font-size: 15px;
+        }
+
+        #calc {
+            width: 250px;
+            border: 5px solid blue;
+            border-radius: 12px;
+            padding: 20px;
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>UNICSUL Calculadora em Javascripts </h1>
+    <div class="formstyle">
+        <form name="form1">
+            <input id="calc" type="text" name="answer"><br> <br>
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="+">
+            <br> <br>
+
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="-">
+            <br> <br>
+
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="*">
+            <br> <br>
+
+
+            <input type="button" value="/">
+            <input type="button" value="0">
+            <input type="button" value=".">
+            <input type="button" value="=">
+            <br>
+            <input type="button" value="Clear All">
+            <br>
+
+            <script>
+                document.querySelectorAll('input').forEach((input) => {
+                    input.addEventListener('click', () => {
+
+                        if (input.value != 'Clear All' && input.value != '' && input.value != '=') {
+                            document.querySelector('#calc').value += input.value
+                        } else if (input.value == '=') {
+                            document.querySelector('#calc').value = eval(document.querySelector('#calc').value)
+                        }
+                    })
+                })
+
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>

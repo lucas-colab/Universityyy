@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>UNICSUL - PROG WEB</h1>
+    <h2>Exercicios de javascript</h2><br>
+    <p>Entre com a senha atual: <input type="password" id="pwd"></input></p><br>
+    <p>Entre com a nova senha: <input type="password" id="pwdnew"></input></p><br>
+    <p>Entre novamente com a nova senha: <input type="password" id="pwdnew2"></input></p><br>
+    <br><br>
+    <button onclick="processar()">Processar</button>
+    <script>
+        function processar() {
+            var a = document.getElementById("pwd").value;
+            var nova = document.getElementById("pwdnew").value;
+            var novac = document.getElementById("pwdnew2").value;
+
+            if (t.length < 10) {
+                alert("digite uma senha com 10 digitos");
+                document.getElementById("pwd").focus();
+                return 0;
+            }
+            if (tl.length < 10) {
+                alert("digite uma senha com 10 digitos");
+                document.getElementById("pwdnew").focus();
+                return 0;
+            }
+            if (sn2.length < 10) {
+                alert("digite uma senha com 8 digitos");
+                document.getElementById("pwdnew2").focus();
+                return 0;
+            }
+
+
+            if (t == tl) {
+                alert("mude a senha para uma nova");
+                document.getElementById("pwdnew").focus();
+                return 0
+
+
+            } if (tl != sn2) {
+                alert("coloque a senha igual");
+                document.getElementById("pwdnew2").focus();
+                return 0
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

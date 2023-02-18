@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>UNICSUL - PROG WEB</h1>
+    <h2>Exercicios de javascript</h2><br>
+    <p>Entre com a senha atual: <input type="password" id="pwdantiga"></input></p><br>
+    <p>Entre com a nova senha: <input type="password" id="pwdnew"></input></p><br>
+    <p>Entre novamente com a nova senha: <input type="password" id="pwdnew2"></input></p><br>
+    <br><br>
+    <button onclick="processar()">Processar</button>
+    <script>
+        function processar() {
+            var a = document.getElementById("pwdantiga").value;
+            var nova = document.getElementById("pwdnew").value;
+            var novac = document.getElementById("pwdnew2").value;
+            var strongpwd = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+
+
+
+            if (!strongpwd.test(nova)) {
+                alert("senha precisa ter caracteres especiais");
+                return 1;
+            } else if (nova.length != novac.length) {
+                alert("senha precisa ser iguais ");
+                return 1;
+
+            } else if (a.length == nova.length) {
+                alert("a senha nova nao pode ser igual a antiga");
+                return 0
+            } else {
+                alert("secesso");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
