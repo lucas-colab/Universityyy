@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCUMENTO</title>
+</head>
+<body>
+    <h1><b>Universidade Cruzeiro Do Sul</b></h1>
+    <h2>Análise e Desenvolvimento de Sistema</h2>
+    <h3>Aplicações para internet</h3>
+
+    <hr>
+
+    <form>
+        <p>Unidade: 
+
+            <input type="radio" id="paulista">
+            <label for="html">Paulista</label>
+            <input type="radio" id="santo amaro">
+            <label for="santo amaro">Santo Amaro</label>
+            
+        </p>
+
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+        </form>
+
+            <br>
+
+        <form>
+            <label for="senha">Senha:</label>
+            <input type="text" id="senha">
+        </form>
+
+            <br>
+
+        <form>
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+        </form>
+
+            <br>
+
+        </form>
+            <label for="data">Data:</label>
+            <input type="date" id="data">
+        </form>
+
+            
+
+        <form action="/action_page.php"> <br>
+                <label for="lugares">UF:</label>
+                <select name="places" id="places">
+                    <option value="SP">SP</option>
+                    <option value="AC">AC</option>
+                    <option value="AM">AM</option>
+                    <option value="RR">RR</option>
+                    <option value="PA">PA</option>
+                    <option value="AP">AP</option>
+                    <option value="TO">TO</option>
+                </select>
+        </form>
+
+        <p>Formacao:</p>
+            <ul>
+
+                <input type="checkbox" name="ensinomedio" id="ensinomedio">
+                <label for="ensinomedio">Ensino Medio</label>
+                
+            </ul>
+            
+            <ul>
+                <input type="checkbox" name="graduacao" id="graduacao">
+                <label for="graduacao">Graduacao</label>
+            </ul>
+
+            <ul>
+                <input type="checkbox" name="mba" id="mba">
+                <label for="mba">MBA</label>
+            </ul>
+
+            <ul>
+                <input type="checkbox" name="mestrado" id="mestrado">
+                <label for="mestrado">Mestrado</label>
+            </ul>
+
+            <ul>
+                <input type="checkbox" name="doutorado" id="doutorado">
+                <label for="doutorado">Doutorado</label>
+            </ul>
+
+                <form>
+                    <p>Comentario/Observacoes:</p>
+                    <textarea name="comentario" id="comentario" cols="40" rows="5"></textarea>
+                </form>
+
+                <hr>
+
+                <div>
+                    <input type="submit" value="Consultar" id="consultar">
+                    <input type="button" value="Sair" id="sair">
+                </div>
+            
+</html>
